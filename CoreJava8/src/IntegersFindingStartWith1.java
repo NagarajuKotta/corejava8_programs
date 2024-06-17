@@ -15,7 +15,7 @@ public class IntegersFindingStartWith1 {
     }
 
     public static void startWith1BeforeJava8(int arr[]) {
-        System.out.println("-----------------------------");
+        System.out.println("---------------------------------");
         for (int i = 0; i < arr.length; ++i) {
             String str = String.valueOf(arr[i]);
             if (str.length() > 0 && str.charAt(0) == '1') {
