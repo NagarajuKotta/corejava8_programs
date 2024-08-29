@@ -72,7 +72,8 @@ public class ListToMap {
          System.out.println("Group By Salary :: "+salaryGroup);
 
          LinkedHashMap<Integer, List<Employee>> sortedGroup = salaryGroup.entrySet().stream()
-                 .sorted(Map.Entry.<Integer, List<Employee>>comparingByKey(Comparator.reverseOrder())).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (n,o)->o, LinkedHashMap::new));
+                 .sorted(Map.Entry.<Integer, List<Employee>>comparingByKey(Comparator.reverseOrder()))
+                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (n,o)->o, LinkedHashMap::new));
          System.out.println("Sorted :"+sortedGroup);
 
      }
